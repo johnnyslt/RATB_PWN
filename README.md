@@ -24,6 +24,6 @@ Run ratb_pwn with the 'mod' action argument to modify the dump file with the spe
 
 Example:
 
-`./ratb_pwn.py mod'
+`./ratb_pwn.py mod`
 `./ratb_pwn.py mod FILE TRAVELS`
 `./ratb_pwn.py mod FILE TRAVELS -w`
