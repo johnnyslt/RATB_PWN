@@ -191,7 +191,7 @@ def main():
     elif args.action == "mod":
 
         if os.path.isfile(args.file):
-            if int(args.travels) in range(0, 31):
+            if int(args.travels) in range(0, 32):
                 printEx("Writing file..", PrintType.Info)
 
                 kek = ParseThePotatoes(args.file)
