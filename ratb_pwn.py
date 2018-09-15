@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-import os, argparse
+import os, argparse, sys
 from enum import Enum
 
 TRAVEL_PRICE = 130 # 1.30 ron
@@ -103,9 +103,9 @@ class ParseThePotatoes(object):
             if self.file.seek(address[0][0]) and self.file.read(2).hex() == "b040" and self.file.seek(address[1][0]) and self.file.read(2).hex() == "b040":
                     return address
 
-            print(hex(self.file.tell()))
-
-        print("Unknown card type.")
+        printEx("Unknown card type.", PrintType.Error)
+        self.close_file()
+        sys.exit(1)
 
     def write_dump(self, address_list, travels):
         for address in address_list:
