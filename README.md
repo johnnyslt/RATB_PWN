@@ -4,7 +4,8 @@ Automatically modify ratb mfd card dumps.
 ## Summary ##
 Regia Autonomă de Transport București (RATB) is a public transport operator in Bucharest, Romania.
 
-This tool automates the process of manually modifing mfd card dump files, which can be obtained with mfoc from all RATB cards after all keys have been recoverd, to set any desired number of travels
+This tool automates the process of manually modifing mfd card dump files, which can be obtained with mfoc from all RATB cards after all keys have been recoverd, to set any desired number of travels.
+
 This tool works on all Active green cards.
 
 ## RATB_PWN Usage ##
