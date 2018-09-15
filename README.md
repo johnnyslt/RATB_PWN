@@ -29,3 +29,6 @@ Example:
 `./ratb_pwn.py mod FILE TRAVELS`
 
 `./ratb_pwn.py mod FILE TRAVELS -w`
+
+## Resources ##
+[RSTForums](https://rstforums.com/forum/topic/102403-nfc-challenge/) - Parsing hex data from mfd dumps
