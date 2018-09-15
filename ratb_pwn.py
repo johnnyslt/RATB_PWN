@@ -181,13 +181,13 @@ class ParseThePotatoes(object):
 crc = CRC(0x1021)
 
 def main():
-    parser = argparse.ArgumentParser(usage='./kek.py [info, mod] [-h]', formatter_class=argparse.RawDescriptionHelpFormatter, description=(Banner.SHOW))
+    parser = argparse.ArgumentParser(usage='./ratb_pwn.py [info, mod] [-h]', formatter_class=argparse.RawDescriptionHelpFormatter, description=(Banner.SHOW))
     subparsers = parser.add_subparsers(dest='action', help='Action to perform on ratb mfd dumps')
 
-    info_parser = subparsers.add_parser('info', help='Parse dump and print relevant information', usage='./kek.py info FILE')
+    info_parser = subparsers.add_parser('info', help='Parse dump and print relevant information', usage='./ratb_pwn.py info FILE')
     info_parser.add_argument('file', help='RATB mfd file')
 
-    mod_parser  = subparsers.add_parser('mod', help='Modify dump with n travels (max 31)', usage='./kek.py mod FILE TRAVELS')
+    mod_parser  = subparsers.add_parser('mod', help='Modify dump with n travels (max 31)', usage='./ratb_pwn.py mod FILE TRAVELS')
     mod_parser.add_argument('file', help='RATB mfd file')
     mod_parser.add_argument('travels', help='Number of travels required (max 31)')
     mod_parser.add_argument('-w', '--write', help='Write dump to card', action='store_true')
