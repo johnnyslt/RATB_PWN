@@ -1,5 +1,5 @@
 # RATB_PWN
-Automatically modify ratb mfd dumps.
+Automatically modify ratb mfd card dumps.
 
 ## Summary ##
 Regia Autonomă de Transport București (RATB) is a public transport operator in Bucharest, Romania.
