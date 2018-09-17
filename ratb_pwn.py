@@ -113,7 +113,7 @@ class ParseThePotatoes(object):
             self.file.seek(address[1])
             self.file.write(bytearray.fromhex(hex_travels(travels)))
 
-            # number of tines the card has been manipulated
+            # number of times the card has been manipulated
             self.file.seek(address[2])
             # read data from dump, get hex val as str
             data = self.file.read(2).hex()
@@ -146,9 +146,8 @@ class ParseThePotatoes(object):
         self.file.seek(address_list[0][2])
         counter = str(int(self.file.read(2).hex(), base=16) / 16)
 
-        self.file.seek(address_list[0][0])
-        crc_val = calc_crc(self.file.read(46).hex())
-        crc_val = crc_val[2:] + crc_val[0:2]
+        self.file.seek(address_list[0][3])
+        crc_val = self.file.read(2).hex()
 
         self.file.seek(0x0)
         uid = self.file.read(4).hex()
