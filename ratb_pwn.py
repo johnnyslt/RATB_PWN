@@ -98,9 +98,12 @@ class ParseThePotatoes(object):
                          ([0x100, 0x125, 0x127, 0x12e], [0x340, 0x365, 0x367, 0x36e])
                          )
 
+        self.valid_bytes = ["b040", "af40", "6440"]
+
+
     def check_card_type(self):
         for address in self.address_list:
-            if self.file.seek(address[0][0]) and self.file.read(2).hex() == "b040" and self.file.seek(address[1][0]) and self.file.read(2).hex() == "b040":
+            if self.file.seek(address[0][0]) and self.file.read(2).hex() in self.valid_bytes and self.file.seek(address[1][0]) and self.file.read(2).hex() in self.valid_bytes:
                     return address
 
         printEx("Unknown card type.", PrintType.Error)
